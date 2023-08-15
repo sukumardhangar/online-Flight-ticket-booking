@@ -1,0 +1,19 @@
+package com.app.entity;
+
+import javax.persistence.*;
+
+import lombok.Getter;
+import lombok.Setter;
+@Entity
+@Table(name = "ticket")
+@Getter
+@Setter
+public class Ticket extends BaseEntity {
+	private Long flightId;
+	private  Long  passengerId;
+	@ManyToOne 
+	@JoinColumn(name = "person_id")
+    private Person personId;
+
+    
+}

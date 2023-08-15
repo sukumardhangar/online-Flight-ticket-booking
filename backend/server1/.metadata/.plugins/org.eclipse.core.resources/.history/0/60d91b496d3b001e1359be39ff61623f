@@ -1,0 +1,10 @@
+package com.app.entity;
+
+public class Ticket extends BaseEntity {
+	private Long flightId;
+	private  Long  passengerId;
+	@ManyToOne 
+	@JoinColumn(name = "dept_id")
+    private Long personId;
+    
+}

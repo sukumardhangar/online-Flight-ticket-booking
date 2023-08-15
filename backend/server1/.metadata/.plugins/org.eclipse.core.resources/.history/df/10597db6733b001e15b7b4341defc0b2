@@ -1,0 +1,36 @@
+package com.app.entity;
+
+import javax.persistence.*;
+
+import lombok.Getter;
+import lombok.Setter;
+@Entity
+@Table(name = "ticket")
+@Getter
+@Setter
+public class Ticket extends BaseEntity {
+	private Long flightId;
+	private  Long  passengerId;
+	@ManyToOne 
+	@JoinColumn(name = "person_id")
+    private Person personId;
+	public Long getFlightId() {
+		return flightId;
+	}
+	public void setFlightId(Long flightId) {
+		this.flightId = flightId;
+	}
+	public Long getPassengerId() {
+		return passengerId;
+	}
+	public void setPassengerId(Long passengerId) {
+		this.passengerId = passengerId;
+	}
+	public Person getPersonId() {
+		return personId;
+	}
+	public void setPersonId(Person personId) {
+		this.personId = personId;
+	}
+    
+}

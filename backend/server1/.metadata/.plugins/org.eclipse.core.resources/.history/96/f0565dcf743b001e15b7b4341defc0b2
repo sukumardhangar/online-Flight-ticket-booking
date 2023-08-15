@@ -1,0 +1,18 @@
+package com.app.entity;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Entity
+@Table(name = "address")
+@Getter
+@Setter
+public class Address extends BaseEntity{
+
+}

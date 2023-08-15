@@ -1,0 +1,72 @@
+package com.app.entity;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.*;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Entity
+@Table(name = "person")
+@Getter
+@Setter
+public class Person extends BaseEntity 
+{
+	@Column(name = "fname",length = 30)
+  private String firstName;
+	@Column(name = "lname",length = 30)
+  private String lastName;
+	@Column(name = "email",length = 30)
+  private String email;
+	@Column(name = "password",length = 30)
+  private String password;
+	@Column(name = "role",length = 30)
+  private String role;
+	@OneToMany(mappedBy = "personId")
+	private List<Ticket> ticketList = new ArrayList<>();
+  public void addTicket(Ticket t)
+  {
+	  ticketList.add(t);
+	  t.setPersonId(this);
+	
+  }
+public String getFirstName() {
+	return firstName;
+}
+public void setFirstName(String firstName) {
+	this.firstName = firstName;
+}
+public String getLastName() {
+	return lastName;
+}
+public void setLastName(String lastName) {
+	this.lastName = lastName;
+}
+public String getEmail() {
+	return email;
+}
+public void setEmail(String email) {
+	this.email = email;
+}
+public String getPassword() {
+	return password;
+}
+public void setPassword(String password) {
+	this.password = password;
+}
+public String getRole() {
+	return role;
+}
+public void setRole(String role) {
+	this.role = role;
+}
+public List<Ticket> getTicketList() {
+	return ticketList;
+}
+public void setTicketList(List<Ticket> ticketList) {
+	this.ticketList = ticketList;
+}
+  
+}

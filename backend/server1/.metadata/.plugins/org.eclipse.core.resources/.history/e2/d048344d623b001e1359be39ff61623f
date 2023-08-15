@@ -1,0 +1,23 @@
+package com.app.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "person")
+public class Person extends BaseEntity 
+{
+	@Column(name = "fname",length = 30)
+  private String firstName;
+	@Column(name = "fname",length = 30)
+  private String lastName;
+	@Column(name = "fname",length = 30)
+  private String email;
+	@Column(name = "fname",length = 30)
+  private String password;
+	@Column(name = "fname",length = 30)
+  private String role;
+
+  
+}

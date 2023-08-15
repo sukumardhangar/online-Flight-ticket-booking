@@ -1,0 +1,8 @@
+package com.app.entity;
+
+public class Ticket extends BaseEntity {
+	private Long flightId;
+	private  Long  passengerId;
+    private Long personId;
+    
+}

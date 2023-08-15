@@ -1,0 +1,15 @@
+package com.app.entity;
+
+import javax.persistence.Column;
+
+public class Person extends BaseEntity 
+{
+	@Column(name = "fname",length = 30)
+  private String firstName;
+  private String lastName;
+  private String email;
+  private String password;
+  private String role;
+
+  
+}

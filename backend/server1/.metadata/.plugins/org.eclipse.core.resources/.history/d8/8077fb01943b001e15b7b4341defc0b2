@@ -1,0 +1,11 @@
+package com.app.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+@Embeddable
+public class Adhar 
+{
+	@Column(name="passport_no",unique = true,length = 20)
+	private String adharNo;
+
+}
